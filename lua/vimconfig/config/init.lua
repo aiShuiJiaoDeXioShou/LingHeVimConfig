@@ -5,6 +5,4 @@ require("vimconfig.config.hotkey")
 -- 设置基础设置
 require("vimconfig.config.config")
 -- 设置中文
-vim.cmd [[
-    source lua/vimconfig/config/ecode.vim
-]]
+vim.cmd("source " .. BasePath .. "lua/vimconfig/config/ecode.vim")

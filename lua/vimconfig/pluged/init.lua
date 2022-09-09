@@ -1,7 +1,7 @@
 --这个地方管理Vim的插件配置
 local Plug = vim.fn['plug#']
 
-vim.call('plug#begin', 'plugged')
+vim.call('plug#begin', PlugPath .. 'plugged')
 
 Plug 'wellle/targets.vim'
 Plug 'NLKNguyen/papercolor-theme'
@@ -20,11 +20,9 @@ Plug 'jiangmiao/auto-pairs'
 vim.call('plug#end')
 
 -- 自己写的一些插件直接通过命令行来调用
-vim.cmd [[
-    " 符号自动补全插件
-    source lua/vimconfig/pluged/symbolauto.vim
-    " 编译插件
-    source lua/vimconfig/pluged/compile.vim
-    " 导入插件配置
-    source lua/vimconfig/pluged/plugconfig.vim
-]]
+-- 符号自动补全插件
+vim.cmd('source' .. BasePath .. 'lua/vimconfig/pluged/symbolauto.vim')
+-- 编译插件
+vim.cmd('source' .. BasePath .. 'lua/vimconfig/pluged/compile.vim')
+-- 导入插件配置
+vim.cmd('source' .. BasePath .. 'lua/vimconfig/pluged/plugconfig.vim')
