@@ -2,9 +2,9 @@
 require('vimconfig.fn')
 NowOs = IfOs()
 if NowOs == "Windows" then
-    BasePath = "  ~/AppData/Local/nvim/"
+    BasePath = "\t~/AppData/Local/nvim/"
     PlugPath = "~/AppData/Local/nvim/"
 elseif NowOs == "Linux" then
-    BasePath = "  ~/.config/nvim/"
+    BasePath = "\t~/.config/nvim/"
     PlugPath = "~/.config/nvim/"
 end

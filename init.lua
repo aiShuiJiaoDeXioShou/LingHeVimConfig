@@ -2,3 +2,4 @@
 require('globalpre')
 -- 指定配置文件
 require('vimconfig.config')
+require('vimconfig.fn.request')

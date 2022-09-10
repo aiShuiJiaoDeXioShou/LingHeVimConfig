@@ -26,3 +26,7 @@ vim.cmd('source' .. BasePath .. 'lua/vimconfig/pluged/symbolauto.vim')
 vim.cmd('source' .. BasePath .. 'lua/vimconfig/pluged/compile.vim')
 -- 导入插件配置
 vim.cmd('source' .. BasePath .. 'lua/vimconfig/pluged/plugconfig.vim')
+
+-- 用lua编写的插件
+-- 这个插件用于统计文本数量和对汉语语法词句的检查
+require('vimconfig.pluged.wordtree')

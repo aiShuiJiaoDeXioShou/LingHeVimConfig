@@ -1,19 +1,10 @@
-
-"  文件树插件
-map tt :NERDTreeToggle<CR>
-let NERDTreeMapOpenExpl = ""
-let NERDTreeMapUpdir = ""
-let NERDTreeMapUpdirKeepOpen = "l"
-let NERDTreeMapOpenSplit = ""
-let NERDTreeOpenVSplit = ""
-let NERDTreeMapActivateNode = "i"
-let NERDTreeMapOpenInTab = "o"
-let NERDTreeMapPreview = ""
-let NERDTreeMapCloseDir = "n"
-let NERDTreeMapChangeRoot = "y"
-
-
-"coc 配置自动补全
+" 设置nerdtree插件的常规命令
+map <A-Right> :tabn<CR>
+map <A-Left> :tabprevious<CR>
+nmap qq :tabclose <CR>
+nmap qqq :tabo<CR>:q<CR>
+nmap qqo :tabo<CR>
+" coc 配置自动补全
 " 设置leader为空格键
 let mapleader=" "
 inoremap <silent><expr> <TAB>
