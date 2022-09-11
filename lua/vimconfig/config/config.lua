@@ -14,7 +14,7 @@ set.showmatch = true
 set.hlsearch = true
 
 -- 设置主题与主题色
-set.background = 'dark'
+set.background = 'light'
 vim.cmd [[
-    colorscheme PaperColor
+    colorscheme gruvbox   
 ]]

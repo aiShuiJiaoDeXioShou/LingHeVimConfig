@@ -2,7 +2,8 @@
 -- 计算某个中文的字符串数量
 
 
-function coutStr()
+function CoutStr(str)
+    -- 获取当前文件所有与目标str相关的数据
     
 end
 

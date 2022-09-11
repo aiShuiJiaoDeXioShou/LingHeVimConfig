@@ -17,6 +17,9 @@ Plug 'ryanoasis/vim-devicons'
 -- 自动补全括号和删除
 Plug 'jiangmiao/auto-pairs'
 
+-- 主题插件gruvbox
+Plug  "ellisonleao/gruvbox.nvim"
+
 vim.call('plug#end')
 
 -- 自己写的一些插件直接通过命令行来调用
