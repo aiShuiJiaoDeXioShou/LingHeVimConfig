@@ -1,5 +1,5 @@
 -- 简化lua的map配置问题
-Map = function(key)
+function Map(key)
     --get the extra options 设置默认选项
     local opts = { noremap = true }
     for i, v in pairs(key) do
@@ -18,10 +18,4 @@ Map = function(key)
     else
         vim.api.nvim_set_keymap(key[1], key[2], key[3], opts)
     end
-end
-
--- 查看配置文件的位置
-function GetConfigPath()
-    -- 调用全局配置对象
-    print(PlugPath)
 end
