@@ -24,9 +24,15 @@ Plug  "ellisonleao/gruvbox.nvim"
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 
--- 项目文件结构
-Plug'simrat39/symbols-outline.nvim'
+-- 文件搜索神器
+Plug 'nvim-lua/plenary.nvim'
+Plug ('nvim-telescope/telescope.nvim', { tag='0.1.0' })
+
+-- 浮悬终端
+Plug 'voldikss/vim-floaterm'
+
 vim.call('plug#end')
+
 
 -- 自己写的一些插件直接通过命令行来调用
 -- 符号自动补全插件
@@ -36,6 +42,10 @@ vim.cmd('source' .. BasePath .. 'lua/vimconfig/pluged/compile.vim')
 -- 导入插件配置
 vim.cmd('source' .. BasePath .. 'lua/vimconfig/pluged/plugconfig.vim')
 
+-- 加载自定义UI界面
+require('vimconfig.pluged.dashboard_ui')
+
 -- 用lua编写的插件
 -- 这个插件用于统计文本数量和对汉语语法词句的检查
 require('vimconfig.pluged.wordtree')
+

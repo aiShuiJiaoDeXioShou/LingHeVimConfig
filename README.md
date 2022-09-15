@@ -21,3 +21,7 @@ lua GetBasePat()
 + 使用qq关闭当前标签页
 + 对文件树使用S切换选择的目录为根源目录
 + 对文件树使用T新建一个tab，使用t新建一个tab
+
+## 关于搜索文件的操作，具体请看
+
+(文件搜索树插件)[https://github.com/nvim-telescope/telescope.nvim]

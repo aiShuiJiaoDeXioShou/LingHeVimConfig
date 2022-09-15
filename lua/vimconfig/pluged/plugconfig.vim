@@ -5,11 +5,6 @@ require('lualine').setup()
 options = { theme = 'gruvbox' }
 END
 
-" 启动项目文件结构
-lua require("symbols-outline").setup()
-
-
-
 " 设置nerdtree插件的常规命令
 map <A-Right> :tabn<CR>
 map <A-Left> :tabprevious<CR>
@@ -17,8 +12,7 @@ nmap qq :tabclose <CR>
 nmap qqq :tabo<CR>:q<CR>
 nmap qqo :tabo<CR>
 
-
-" coc 配置自动补全
+"coc 配置自动补全
 " 设置leader为空格键
 let mapleader=" "
 inoremap <silent><expr> <TAB>
@@ -36,8 +30,8 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 
 nmap <leader>rn <Plug>(coc-rename)
 
-xmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
+xmap <leader>fr  <Plug>(coc-format-selected)
+nmap <leader>fr  <Plug>(coc-format-selected)
 
 augroup mygroup
     autocmd!
@@ -117,3 +111,18 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+
+
+" 文件搜索配置文件
+
+" 全局查找文件,列出当前工作目录中的文件，根据.gitignore
+nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
+" 通过命令输出进行模糊搜索
+nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
+
+" 显示历史打开过的文件
+nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
+
+nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
+" 在当前工作目录中搜索光标下的字符串
+nnoremap <leader>fs <cmd>lua require('telescope.builtin').grep_string()<cr>
