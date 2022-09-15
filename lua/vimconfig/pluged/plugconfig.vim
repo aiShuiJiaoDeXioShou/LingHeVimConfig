@@ -1,9 +1,23 @@
+" 开启底部状态栏
+lua << END
+require('lualine').setup()
+-- 设置主题
+options = { theme = 'gruvbox' }
+END
+
+" 启动项目文件结构
+lua require("symbols-outline").setup()
+
+
+
 " 设置nerdtree插件的常规命令
 map <A-Right> :tabn<CR>
 map <A-Left> :tabprevious<CR>
 nmap qq :tabclose <CR>
 nmap qqq :tabo<CR>:q<CR>
 nmap qqo :tabo<CR>
+
+
 " coc 配置自动补全
 " 设置leader为空格键
 let mapleader=" "

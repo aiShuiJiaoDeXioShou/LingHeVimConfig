@@ -16,10 +16,16 @@ Plug 'NLKNguyen/papercolor-theme'
 Plug 'ryanoasis/vim-devicons'
 -- 自动补全括号和删除
 Plug 'jiangmiao/auto-pairs'
-
+Plug 'glepnir/dashboard-nvim' 
 -- 主题插件gruvbox
 Plug  "ellisonleao/gruvbox.nvim"
 
+-- 底部状态栏
+Plug 'nvim-lualine/lualine.nvim'
+Plug 'kyazdani42/nvim-web-devicons'
+
+-- 项目文件结构
+Plug'simrat39/symbols-outline.nvim'
 vim.call('plug#end')
 
 -- 自己写的一些插件直接通过命令行来调用
